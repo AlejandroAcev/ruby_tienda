@@ -13,6 +13,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_product_url
     assert_response :success
+    assert_select "form" do
+      assert_select "input[name=?]", "product[titulo]"
+      assert_select "input[name=?]", "product[descripcion]"
+      assert_select "input[name=?]", "product[imagen]"
+      assert_select "input[name=?]", "product[precio]"
+    end
   end
 
   test "should create product" do

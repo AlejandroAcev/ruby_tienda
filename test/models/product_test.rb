@@ -15,24 +15,22 @@ class ProductTest < ActiveSupport::TestCase
 
 	test "Producto valido sin inicializar" do
 	    producto = Product.new
-	    assert producto.invalid?("Deberia ser invalido")
+	    refute producto.valid?("Deberia ser invalido")
 	    refute producto.errors[:titulo].blank?, "debe tener titulo"
 	    refute producto.errors[:descripcion].blank?, "debe tener descripcion"
 	    refute producto.errors[:imagen].blank?, "debe tener imagen"
 	    refute producto.errors[:precio].blank?, "debe tener precio"
+	    refute producto.valid?
   	end
 
-  	test "Comprobar valores por defecto" do
-	    producto = Product.new
-    	assert_equal producto.imagen
-  	end
 
   	test "Comprobacion titulo unico" do
 	    producto = Product.first.dup
 	    producto.descripcion = "descripcion2"
 	    producto.imagen = "imagen_defecto2.png"
 	    producto.precio = 10
-	    assert producto.save, "No se pueden guardar dos productos con el mismo titulo"
+	    assert producto.valid?, "No se puede guardar dos titulo iguales"
+
 	end
 
 end
