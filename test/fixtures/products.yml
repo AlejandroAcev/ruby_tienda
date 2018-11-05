@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: Producto1
+  descripcion: Descripcion de prueba1
+  imagen: C://ruta/prueba1.png
+  precio: 1
+
+two:
+  titulo: Producto2
+  descripcion: Descripcion de prueba2
+  imagen: C://ruta/prueba2.png
+  precio: 2
