@@ -22,7 +22,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create product" do
-    assert_difference('Product.count') do
+    assert_difference('Product.count', 0) do
       post products_url, params: { product: { descripcion: @product.descripcion, imagen: @product.imagen, precio: @product.precio, titulo: @product.titulo } }
     end
 
