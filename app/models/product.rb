@@ -4,6 +4,6 @@ class Product < ApplicationRecord
 	validates :descripcion, length: { minimum: 3}
 	validates :titulo, uniqueness: true
 	
-	belongs_to :category
+	has_many :categories
 
 end
