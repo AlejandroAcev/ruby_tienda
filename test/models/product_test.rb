@@ -29,7 +29,7 @@ class ProductTest < ActiveSupport::TestCase
 	    producto.descripcion = "descripcion2"
 	    producto.imagen = "imagen_defecto2.png"
 	    producto.precio = 10
-	    assert producto.valid?, "No se puede guardar dos titulo iguales"
+	    refute producto.valid?, "No se puede guardar dos titulo iguales"
 
 	end
 

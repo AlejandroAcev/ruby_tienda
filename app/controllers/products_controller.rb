@@ -71,4 +71,13 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:titulo, :descripcion, :imagen, :precio)
     end
+
+
+    def total_price
+      Carro.total
+      respond_to do |format|
+        format.html { redirect_to products_url, notice: 'Resultado total' + Carro.total }
+        format.json { head :no_content }
+      end
+    end
 end

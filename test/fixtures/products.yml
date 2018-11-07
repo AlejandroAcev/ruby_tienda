@@ -5,15 +5,18 @@ one:
   descripcion: "Descripcion de prueba1"
   imagen: "C://ruta/prueba1.png"
   precio: 1
+  #category_id: 1
 
 two:
   titulo: "Producto2"
   descripcion: "Descripcion de prueba2"
   imagen: "C://ruta/prueba2.png"
   precio: 2
+  #category_id: 2
 
 three:
   titulo: "Producto3"
   descripcion: "Descripcion de prueba3"
   imagen: "C://ruta/prueba3.png"
   precio: 3
+  #category_id: 3

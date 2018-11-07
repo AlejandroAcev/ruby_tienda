@@ -3,7 +3,9 @@
 one:
   titulo: MyString
   descripcion: MyString
+  category_id: 1
 
 two:
   titulo: MyString
   descripcion: MyString
+  category_id: 2
